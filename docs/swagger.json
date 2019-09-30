@@ -1,0 +1,60 @@
+{
+  "consumes": [
+    "application/json",
+    "multipart/form-data"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "the purpose of this api is to showcase the swagger doc generation issue.",
+    "title": "Exposes this swagger-issue-example.",
+    "version": "0.0.1"
+  },
+  "host": "localhost:5000",
+  "basePath": "/api/v1",
+  "paths": {
+    "/examples": {
+      "get": {
+        "description": "This will return you a page of examples.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "retrieves"
+        ],
+        "summary": "Get a collection of examples including paging",
+        "operationId": "examples",
+        "responses": {
+          "200": {
+            "description": "collection of paginated examples",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ExampleListResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-meta-array": [
+    "value1",
+    "value2"
+  ],
+  "x-meta-array-obj": [
+    {
+      "name": "obj",
+      "value": "field"
+    }
+  ],
+  "x-meta-value": "value"
+}

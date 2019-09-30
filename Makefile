@@ -1,3 +1,14 @@
+reproduce: generate
+	@git diff
+
+docs/swagger.json:
+	@mkdir -p docs
+	@touch docs/swagger.json
+
+generate: docs/swagger.json
+	@echo Generate code
+	@go generate ./...
+	
 install: install-tools
 
 install-tools:
