@@ -46,6 +46,72 @@
       }
     }
   },
+  "definitions": {
+    "Example": {
+      "description": "Example the response of an example resource",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "x-go-name": "Description"
+        },
+        "priority": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Priority"
+        },
+        "title": {
+          "type": "string",
+          "x-go-name": "Title"
+        }
+      },
+      "x-go-package": "github.com/marcofranssen/go-swagger-issue/domain"
+    },
+    "ExampleListResponse": {
+      "description": "ExampleListResponse the response of a list of example resources",
+      "type": "object",
+      "properties": {
+        "examples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExampleResponse"
+          },
+          "x-go-name": "Examples"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Limit"
+        },
+        "page": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Page"
+        }
+      },
+      "x-go-package": "github.com/marcofranssen/go-swagger-issue/api"
+    },
+    "ExampleResponse": {
+      "description": "ExampleResponse the response of an example resource",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "x-go-name": "Description"
+        },
+        "priority": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Priority"
+        },
+        "title": {
+          "type": "string",
+          "x-go-name": "Title"
+        }
+      },
+      "x-go-package": "github.com/marcofranssen/go-swagger-issue/api"
+    }
+  },
   "x-meta-array": [
     "value1",
     "value2"
