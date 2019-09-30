@@ -47,26 +47,6 @@
     }
   },
   "definitions": {
-    "Example": {
-      "description": "Example the response of an example resource",
-      "type": "object",
-      "properties": {
-        "description": {
-          "type": "string",
-          "x-go-name": "Description"
-        },
-        "priority": {
-          "type": "integer",
-          "format": "int64",
-          "x-go-name": "Priority"
-        },
-        "title": {
-          "type": "string",
-          "x-go-name": "Title"
-        }
-      },
-      "x-go-package": "github.com/marcofranssen/go-swagger-issue/domain"
-    },
     "ExampleListResponse": {
       "description": "ExampleListResponse the response of a list of example resources",
       "type": "object",
